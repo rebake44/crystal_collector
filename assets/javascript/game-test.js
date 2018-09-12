@@ -8,7 +8,6 @@ $(document).ready(function () {
 
  
 
-  // Is it BETWEEN 1 & 12 or Is it 1-12, inclusive??//
 
   var crystalOneValue = Math.floor(Math.random() * 12 + 1);
   // console.log("crystal one value " + crystalOneValue);

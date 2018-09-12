@@ -1,0 +1,47 @@
+.container {
+    text-align: center;
+    color: rgb(29, 255, 8)
+}
+
+/* img {
+    position: relative;
+    object-position: center;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 70%;
+    text-align: center;
+} */
+
+.targetValue {
+    background-image: url('../images/white_crystal.PNG');
+    background-repeat: no-repeat;
+    width: 415px;
+    height: 220px;
+    background-size: 100% 100%;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+#targetValue {
+    font-size: 80px;
+    -webkit-text-stroke-width: 3px;
+    font-weight: bolder;
+    -webkit-text-stroke-color: black;
+}
+.col-sm-3 {
+    font-size: 20px;
+}
+h1, h2 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-weight: bold;
+}
+.panel {
+    border: 2px yellow;
+}
