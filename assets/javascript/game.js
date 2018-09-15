@@ -1,92 +1,134 @@
 $(document).ready(function () {
 
-    var targetValue = Math.floor(Math.random() * 102 + 19);
+  var targetValue = Math.floor(Math.random() * 102 + 19);
 
-    console.log("target value " + targetValue);
+  console.log("target value " + targetValue);
 
-    var counter = 0;
+  $("#targetValue").html(targetValue);
 
-    // Is it BETWEEN 1 & 12 or Is it 1-12, inclusive??//
-
-    var crystalOneValue = Math.floor(Math.random() * 12 + 1);
-
-    console.log("crystal one value " + crystalOneValue);
-
-    var crystalTwoValue = Math.floor(Math.random() * 12 + 1);
-    console.log("crystal two value " + crystalTwoValue);
-
-    var crystalThreeValue = Math.floor(Math.random() * 11.999999999 + 1);
-    console.log("crystal three value " + crystalThreeValue);
-
-    var crystalFourValue = Math.floor(Math.random() * 11.999999999 + 1);
-    console.log("crystal four value " + crystalFourValue);
+ 
 
 
+  var crystalOneValue = Math.floor(Math.random() * 12 + 1);
+  // console.log("crystal one value " + crystalOneValue);
 
-    // keeping javascript here just for reference//
-    // document.getElementById("crystalOneValue").innerHTML = crystalOneValue;//
+  var crystalTwoValue = Math.floor(Math.random() * 12 + 1);
+  // console.log("crystal two value " + crystalTwoValue);
 
-    $("#crystalOneValue").html(crystalOneValue);
-    $("#crystalTwoValue").html(crystalTwoValue);
-    $("#crystalThreeValue").html(crystalThreeValue);
-    $("#crystalFourValue").html(crystalFourValue);
+  var crystalThreeValue = Math.floor(Math.random() * 12 + 1);
+  // console.log("crystal three value " + crystalThreeValue);
 
-    //duplicate this function for each crytal
+  var crystalFourValue = Math.floor(Math.random() * 12 + 1);
+  // console.log("crystal four value " + crystalFourValue);
 
-    });
+  var counter = 0;
+  var wins = 0;
+  var losses = 0;
 
-    $("#crystalOneValue").click(function () {
-        counter = counter + crystalOneValue;
-        $("#counter").html(counter);
-        console.log(counter);
-        printCounter();
-      });
-      
-      $("#crystalTwoValue").click(function () {
-        counter = counter + crystalTwoValue;
-        $("#counter").html(counter);
-        console.log(counter);
-      });
-    
-      $("#crystalThreeValue").click(function () {
-        counter = counter + crystalThreeValue;
-        $("#counter").html(counter);
-        console.log(counter);
-      });
-    
-      $("#crystalFourValue").click(function () {
-        counter = counter + crystalFourValue;
-        $("#counter").html(counter);
-        console.log(counter);
-      });
-    
+  $("#wins").html(wins);
+  $("#losses").html(losses);
 
 
-    // //onclick event to start game//
 
-    //display the crystal value in the DOM//
+  // keeping javascript here just to remember how to do it - for reference//
+  // document.getElementById("crystalOneValue").innerHTML = crystalOneValue;//
+
+  //leaving these here so I can test easier//
+  $("#crystalOneValue").html(crystalOneValue);
+  $("#crystalTwoValue").html(crystalTwoValue);
+  $("#crystalThreeValue").html(crystalThreeValue);
+  $("#crystalFourValue").html(crystalFourValue);
+
+  
+  function reStartGame() {
+    targetValue = Math.floor(Math.random() * 102 + 19);
     $("#targetValue").html(targetValue);
+    crystalOneValue = Math.floor(Math.random() * 12 + 1);
+    crystalTwoValue = Math.floor(Math.random() * 12 + 1);
+    crystalThreeValue = Math.floor(Math.random() * 12 + 1);
+    crystalFourValue = Math.floor(Math.random() * 12 + 1);
+    console.log("reset " + targetValue);
+    console.log("crystal one reset " + crystalOneValue);
+    counter = 0;
+    $("#counter").html(counter);
+  }
+
+  function printCounter() {
+    $("#counter").html(counter);
+  }
+
+  function win() {
+    
+    alert("you win");
+    wins++;
+    $("#wins").html(wins);
+    reStartGame();
+  }
+
+  function lose() {
+    alert("you lose");
+    losses++;
+    $("#losses").html(losses);
+    reStartGame();
+  }
+  //user input/clicks on crystals//
+
+  $("#crystalOneValue").click(function () {
+    counter = counter + crystalOneValue;
+    // $("#counter").html(counter);
+    printCounter();
     $("#counter").html(counter);
 
-    function reStartGame() {
-        targetValue=Math.floor(Math.random()*102+19);
-        console.log("reset " + targetValue);
-    };
-    
-    function printCounter() {
-        $("#counter").html(counter);
-        
+    if (counter == targetValue) {
+      win();
     }
-        printCounter();
+    else if (counter > targetValue) {
+      lose();
+    }
+    console.log(counter);
+  });
 
-    // //if totalSum of user choices equals targetValue, let player know//
-    // if (parseInt(totalSum)) === targetValue) {
-    //     $("#result").text("You win");
-    // }
-    // if totalSum is less than targetValue, user can keep guessing//
+  $("#crystalTwoValue").click(function () {
+    counter = counter + crystalTwoValue;
+    // $("#counter").html(counter);
+    printCounter();
 
+    if (counter == targetValue) {
+      win();
+    }
+    else if (counter > targetValue) {
+      lose();
+    }
 
-    // //display the sum of the crystal the user clicked on//
-    // $("#counter").text(counter);
+    console.log(counter);
+  });
+
+  $("#crystalThreeValue").click(function () {
+    counter = counter + crystalThreeValue;
+    printCounter();
+    // $("#counter").html(counter);
+    if (counter == targetValue) {
+      win();
+    }
+    else if (counter > targetValue) {
+      lose();
+    }
+  
+    console.log(counter);
+  });
+
+  $("#crystalFourValue").click(function () {
+    counter = counter + crystalFourValue;
+    printCounter();
+    // $("#counter").html(counter);
+    if (counter == targetValue) {
+      win();  
+    }
+    else if (counter > targetValue) {
+      lose();
+    }
+  
+    console.log(counter);
+  });
 
 });

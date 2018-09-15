@@ -25,15 +25,15 @@ $(document).ready(function () {
   var wins = 0;
   var losses = 0;
 
-$("#wins").html(wins);
-$("#losses").html(losses);
+  $("#wins").html(wins);
+  $("#losses").html(losses);
 
 
 
   // keeping javascript here just to remember how to do it - for reference//
   // document.getElementById("crystalOneValue").innerHTML = crystalOneValue;//
 
-//leaving these here so I can test easier//
+  //leaving these here so I can test easier//
   $("#crystalOneValue").html(crystalOneValue);
   $("#crystalTwoValue").html(crystalTwoValue);
   $("#crystalThreeValue").html(crystalThreeValue);
@@ -71,7 +71,7 @@ $("#losses").html(losses);
     $("#losses").html(losses);
     reStartGame();
   }
-//user input/clicks on crystals//
+  //user input/clicks on crystals//
 
   $("#crystalOneValue").click(function () {
     counter = counter + crystalOneValue;
@@ -131,32 +131,4 @@ $("#losses").html(losses);
     console.log(counter);
   });
 
-
-
-
-  // //onclick event to start game//
-
-  //display the crystal value in the DOM//
-  // $("#counter").html(counter);
-
-
-
-  // //if counter equals targetValue, let player know//
-  // if (counter === targetValue) {
-  //   alert("You Win");
-  //   win();
-  // }
-  // else if (counter > targetValue) {
-  //   alert("You Lose");
-  //   lose();
-  // }
-  // if totalSum is less than targetValue, user can keep guessing//
-
-
-
-  // var counter;
-  // var scoreTotal;
-  // var losses;
-  // var crystalValue;
-  // var randomCrystalValue;
 });
