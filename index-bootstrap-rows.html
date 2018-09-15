@@ -16,48 +16,60 @@
   <div class="container">
     <div class="panel border border-warning">
       <h1>Crystal Collector Game</h1>
-    <div class="row">
-      <div class="col-sm">
-        <h3>Instructions</h3>
-        <h6>Instructions Instructions Instructions INstructions</h6>
+      <div class="row">
+        <div class="col-sm">
+          <h3>Try to get Your Score to equal the Target Score!</h3>
+          <h5>Each colored crystal below has a hidden value. Each time you click, it will add that amount of points to
+            your total score.
+            You win the game by matching YOUR SCORE to the TARGET SCORE.
+            You lose the game if your total score goes above the random number.</h5>
+        </div>
       </div>
     </div>
-    </div>
-    <div class="targetValue">
-      <div id="target">Target Score</div>
-      <div id="targetValue"></div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="targetValue">
+          <div id="target">Target Score</div>
+          <div id="targetValue"></div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="targetValue">
+        <div id="target">Your Score</div>
+        <div id="counter">0</div>
+      </div>
+      </div>
     </div>
 
-    <div class="row">
-      <div class="col-sm-3">
-        <input type="image" id="crystalOneValue" class="img-fluid" src="assets/images/blue_crystal.PNG" alt="blue crystal">
-      <h6>click here</h6></div>
-      <div class="col-sm-3">
+  <div class="row">
+    <div class="col-sm-3">
+      <input type="image" id="crystalOneValue" class="img-fluid" src="assets/images/blue_crystal.PNG" alt="blue crystal">
+      <h6>click here</h6>
+    </div>
+    <div class="col-sm-3">
+      <input type="image" id="crystalThreeValue" class="img-fluid" src="assets/images/green_crystal.PNG" alt="green crystal">
+      <h6>click here</h6>
+    </div>
+    <div class="col-sm-3">
         <input type="image" id="crystalTwoValue" class="img-fluid" src="assets/images/pink_crystal.PNG" alt="pink crystal">
-        <h6>click here</h6></div>
-        <div class="col-sm-3">
-        <input type="image" id="crystalThreeValue" class="img-fluid" src="assets/images/green_crystal.PNG" alt="green crystal">
-        <h6>click here</h6></div>
-        <div class="col-sm-3">
-        <input type="image" id="crystalFourValue" class="img-fluid" src="assets/images/yellow_crystal.PNG" alt="yellow crystal">
-        <h6>click here</h6></div>
+        <h6>click here</h6>
       </div>
-    <div class="row">
-      <div class="col-sm">
-        <h2>Your Score</h2>
-        <h2 id="counter">0</h2>
-      </div>
+    <div class="col-sm-3">
+      <input type="image" id="crystalFourValue" class="img-fluid" src="assets/images/yellow_crystal.PNG" alt="yellow crystal">
+      <h6>click here</h6>
     </div>
-    <div class="row border border-warning">
-      <div class="col-sm-6">
-        <h2>Wins</h2>
-        <h2 id="wins"></h2>
-      </div>
-      <div class="col-sm-6">
-        <h2>Losses</h2>
-        <h2 id="losses"></h2>
-      </div>
+  </div>
+
+  <div class="row border border-warning">
+    <div class="col-sm-6">
+      <h2>Wins</h2>
+      <h2 id="wins"></h2>
     </div>
+    <div class="col-sm-6">
+      <h2>Losses</h2>
+      <h2 id="losses"></h2>
+    </div>
+  </div>
   </div>
 
   <!-- Optional Javascript Links -->
